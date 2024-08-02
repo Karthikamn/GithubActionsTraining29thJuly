@@ -22,12 +22,10 @@ jobs:
         with:
           distribution: 'microsoft'
           java-version: '17'
-      - name: Setup Maven Action
-        uses: aahmed-se/setup-maven@v3
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v5
         with:
-          java-version: '17'
-          maven-version: ${{ matrix.maven }}
-
+           maven-version: 3.8.2
       - run: mvn -V 
           
      
