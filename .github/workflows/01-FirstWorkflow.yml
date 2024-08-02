@@ -14,7 +14,7 @@ jobs:
       matrix:
         maven: [ '3.8.8', '3.9.8' ]
 
-        name: Maven ${{ matrix.maven }} sample
+        
 
    steps:
       - uses: actions/checkout@v2
