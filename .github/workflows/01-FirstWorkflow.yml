@@ -13,5 +13,8 @@ jobs:
    steps:  
    - name: Setup Java JDK
      uses: actions/setup-java@v4.2.1
+     with:
+      distribution: 
+       jdk
      
     
