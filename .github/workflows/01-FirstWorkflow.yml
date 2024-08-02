@@ -10,6 +10,12 @@ on:
 jobs:
   echo-print:
    runs-on: ubuntu-latest
+   strategy:
+      matrix:
+        maven: [ '3.8.8', '3.9.8' ]
+
+        name: Maven ${{ matrix.maven }} sample
+
    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
@@ -17,7 +23,7 @@ jobs:
           distribution: 'microsoft'
           java-version: '17'
       - name: Setup Maven Action
-        uses: s4u/setup-maven-action@3
+        uses: aahmed-se/setup-maven@v3
         with:
           java-version: '17'
           maven-version: ${{ matrix.maven }}
