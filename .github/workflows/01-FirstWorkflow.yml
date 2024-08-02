@@ -10,24 +10,17 @@ on:
 jobs:
   echo-print:
    runs-on: ubuntu-latest
-   strategy:
-      matrix:
-        maven: [ '3.8.8', '3.9.8' ]
+   
 
         
 
    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-java@v4
-      with:
-       java-version: '17'
-       distribution: 'temurin'
-    - run: mvn --batch-mode --update-snapshots verify
-    - run: mkdir staging && cp target/*.jar staging
-    - uses: actions/upload-artifact@v4
-      with:
-       name: Package
-       path: staging
+    - name: github-actions-nodejs
+  # You may pin to the exact commit or the version.
+  # uses: thonatos/github-actions-nodejs@50c6667f26d2aaa41206e1d43c58682913ad6d71
+      uses: thonatos/github-actions-nodejs@v0.1.1
+          
+   
 
      
     
