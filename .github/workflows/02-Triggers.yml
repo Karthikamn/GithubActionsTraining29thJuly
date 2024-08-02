@@ -2,8 +2,7 @@ name: Trigger Workflow
 
 on: 
  workflow_dispatch:
- schedule: 
-  - cron: '*/2 * * * *'
+ 
 
 jobs:
   echo-print:
