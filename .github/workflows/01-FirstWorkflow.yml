@@ -16,9 +16,13 @@ jobs:
         with:
           distribution: 'microsoft'
           java-version: '17'
-      - name: action-maven
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@< version >
+        with:
+          java-version: '17'
+          maven-version: ${{ matrix.maven }}
 
-        uses: comchangs/action-maven@v0.4-beta
+      - run: mvn -V 
           
      
     
