@@ -10,12 +10,11 @@ on:
 jobs:
   echo-print:
    runs-on: ubuntu-latest
-   steps:  
-   - name: Setup Java JDK
-     uses: actions/setup-java@v4.2.1
-     with:
-      java-version: 17
-      distribution: 
-       jdk,jre
+   steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'microsoft'
+          java-version: '17'
      
     
