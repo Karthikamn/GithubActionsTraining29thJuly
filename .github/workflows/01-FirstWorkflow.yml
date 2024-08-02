@@ -11,9 +11,7 @@ jobs:
   echo-print:
    runs-on: ubuntu-latest
    steps:  
-    - run: echo "This is my First Workflow"
-    - name: Setup Java JDK
-    - uses: actions/setup-java@v1
-      with: 
-         java-version: '11'
+   - name: Setup Java JDK
+     uses: actions/setup-java@v4.2.1
+     
     
