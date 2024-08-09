@@ -8,5 +8,5 @@ jobs:
  reusable-workflow:
   uses: ./.github/workflows/reusable.yml
   with:
-   message: 'Hello Welcome to reusable workflow'
+   message: 'Hello Welcome to the reusable workflow'
    
