@@ -14,3 +14,7 @@ jobs:
      if: ${{success()}}
      run: |
       echo "If previous step pass then it will display success"
+   - name: Step not Cancel
+     if: ${{!cancelled()}}
+     run:
+      echo "It will run always except cancel is selected"
