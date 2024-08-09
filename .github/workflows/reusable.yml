@@ -8,9 +8,9 @@ on:
    required: true
    type: string
 jobs:
- print-meesage:
- runs-on: ubuntu-latest
- steps: 
-  - name: Print Message
-    run: echo ${{inputs.message}}"
+ print-message:
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Print Message
+     run: echo ${{inputs.message}}"
  
