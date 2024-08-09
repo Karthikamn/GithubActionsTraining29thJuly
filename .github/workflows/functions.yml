@@ -18,3 +18,7 @@ jobs:
      if: ${{!cancelled()}}
      run:
       echo "It will run always except cancel is selected"
+   - name: steps cancelled
+     if: ${{cancelled()}}
+     run: |
+      echo "It will execute only if it is cancelled"
