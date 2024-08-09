@@ -1,0 +1,18 @@
+name: Environment Workflow
+
+
+on:
+ push:
+ workflow_dispatch:
+  inputs:
+   target-env:
+   type: environment
+   default: staging
+jobs:
+ echo-environment:
+  runs-on: ubuntu-latest
+  environment: ${{inputs.target-env}}
+  steps:
+   - name: echo the environment
+     run: |
+      echo "Env variable is: ${{vars.TARGET_VAR}}"
