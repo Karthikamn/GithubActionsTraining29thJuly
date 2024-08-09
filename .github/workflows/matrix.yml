@@ -15,7 +15,6 @@ jobs:
     node-version: [ v22.6.0,v21.7.3]
      
   steps:
-   - name: Setup Node
    - uses: actions/setup-node@v4
      with:
       node-version: ${{matrix.node-version}}
