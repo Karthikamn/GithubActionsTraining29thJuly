@@ -1,0 +1,16 @@
+name: Functions workflow
+
+
+on:
+ push:
+ workflow_dispatch:
+jobs:
+ echo-functions:
+  runs-on: ubuntu-latest
+  steps:
+   - name: "step fail"
+     run: exit 1
+   - name: "step success"
+     if: ${{success()}}
+     run: |
+      echo "If previous step pass then it will display success"
