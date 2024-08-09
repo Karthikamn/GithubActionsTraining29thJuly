@@ -1,0 +1,24 @@
+name: Matrix Workflow
+
+on:
+ push:
+ workflow_dispatch:
+jobs:
+ backaward_compatability:
+  name: ${{matrix.os}} - ${{matrix.node}}
+  runs-on: ${{matrix.os}}
+  strategy:
+   matrix:
+    os:
+     - ubuntu-latest
+     - windows-latest
+    node-version: [ v22.6.0,v21.7.3]
+     
+  steps:
+   - name: Setup Node
+   - uses: actions/setup-node@v4
+     with:
+      node-version: ${{matrix.node-version}}
+   - name: Test
+     run: |
+       echo "Test for OS : ${{matrxi.os}} and node ${{matrix.node-version}}"
