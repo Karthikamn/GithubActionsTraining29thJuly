@@ -1,5 +1,3 @@
-
-
 name: 10 - workflow environment
 
 on:
@@ -8,6 +6,7 @@ on:
    target-env:
     type: environment
     default: staging
+
 jobs:
  echo:
   runs-on: ubuntu-latest
