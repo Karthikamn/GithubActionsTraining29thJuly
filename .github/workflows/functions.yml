@@ -9,7 +9,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: "step fail"
-     run: exit 1
+     run: echo " Success"
    - name: "step success"
      if: ${{success()}}
      run: |
