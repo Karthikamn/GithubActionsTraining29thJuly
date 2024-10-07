@@ -28,5 +28,5 @@ jobs:
       echo "Workflow: ${{github.workflow}}"
       echo "Run Id: ${{github.run_id}}"
       echo "Run number: ${{github.run_number}}"
-      echo "Env variable is: ${{var.MY_VAR}}"
+      echo "Env variable is: ${{vars.MY_VAR}}"
       echo  "ENV variable is: ${{env.MY_OVERWRITTEN_VAR}}"
